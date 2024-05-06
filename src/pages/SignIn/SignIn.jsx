@@ -1,12 +1,14 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import login from '../../assets/images/login/login.svg'
-import { AuthContext } from '../../providers/AuthProviders';
+// import { AuthContext } from '../../providers/AuthProviders';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 
 const SignIn = () => {
 
-    const { signInUser } = useContext(AuthContext);
+    // const { signInUser } = useContext(AuthContext);
+    const {signInUser} = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
 
