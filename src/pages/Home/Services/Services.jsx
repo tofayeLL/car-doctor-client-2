@@ -27,7 +27,7 @@ const Services = () => {
                 setServices(data.data);
 
             })
-    }, [])
+    }, [axiosSecure])
 
 
     //  use  normal fetch
