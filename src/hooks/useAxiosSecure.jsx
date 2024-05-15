@@ -5,7 +5,7 @@ import {  useNavigate } from "react-router-dom";
 
 const axiosSecure = axios.create(
     {
-        baseURL: 'http://localhost:5000',
+        baseURL: 'https://car-doctor-server-2-eight.vercel.app',
         withCredentials: true
     }
 )
@@ -23,7 +23,7 @@ const useAxiosSecure = () => {
             (error) => {
                 console.log('error tracked from axios interceptor:', error.response)
                 if (error.response.status === 401 || error.response.status === 403) {
-                    console.log('logout the user');
+                    // console.log('logout the user');
                     logOutUser()
                         .then(() => {
                             // alert("Logout Successfully");

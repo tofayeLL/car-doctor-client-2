@@ -16,7 +16,7 @@ const CheckOut = () => {
        
         const message = form.message.value;
         const order = { firstName, lastName, phone, email, message }
-        console.log(order);
+        // console.log(order);
     }
 
     return (

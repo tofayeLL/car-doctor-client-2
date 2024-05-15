@@ -6,7 +6,7 @@ const useServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-       axios.get('http://localhost:5000/services', {withCredentials:true})
+       axios.get('https://car-doctor-server-2-eight.vercel.app/services', {withCredentials:true})
        .then(data => {
         setServices(data.data);
        })

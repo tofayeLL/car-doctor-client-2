@@ -42,20 +42,20 @@ const AuthProviders = ({ children }) => {
             const loggedUser = { email: userEmail }
 
             setUser(currentUser);
-            console.log('current user', currentUser);
+            // console.log('current user', currentUser);
 
             // if current user have then generate a token
             if (currentUser) {
               
               
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                axios.post('https://car-doctor-server-2-eight.vercel.app/jwt', loggedUser, { withCredentials: true })
                     .then(data => {
                         console.log(data.data);
                     })
 
             }
             else{
-                axios.post('http://localhost:5000/logout', loggedUser, {withCredentials: true})
+                axios.post('https://car-doctor-server-2-eight.vercel.app/logout', loggedUser, {withCredentials: true})
                 .then(data => {
                     console.log(data.data);
                 })

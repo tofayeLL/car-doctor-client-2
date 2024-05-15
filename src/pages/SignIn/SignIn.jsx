@@ -18,7 +18,7 @@ const SignIn = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         // sign in user
         signInUser(email, password)
@@ -32,7 +32,7 @@ const SignIn = () => {
                 // const user = { email }
 
                 // access get token
-             /*    axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+             /*    axios.post('https://car-doctor-server-2-eight.vercel.app/jwt', user, {withCredentials: true})
                     .then(data => {
                         console.log(data.data);
                         if (data.data.success) {
